@@ -1,151 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 function Footer() {
-  const linkStyle = {
-    color: '#9ca3af',
+  const socialStyle = {
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%',
+    backgroundColor: '#222',
+    color: '#fff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     textDecoration: 'none',
-    transition: 'color 0.2s'
-  };
-
-  const socialIconStyle = {
-    color: '#9ca3af',
-    fontSize: '1.2rem',
-    transition: 'color 0.2s'
+    fontSize: '0.85rem',
+    fontWeight: 'bold',
+    border: '1px solid #333'
   };
 
   return (
-    <footer style={{ backgroundColor: '#111827', color: '#fff', padding: '50px 5% 30px 5%', marginTop: 'auto' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', marginBottom: '40px' }}>
+    <footer style={{ backgroundColor: '#0a0a0a', color: '#888', padding: '3rem 5% 1.5rem 5%', borderTop: '1px solid #222' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
         
-        {/* Column 1: About Academy & Social Media */}
+        {/* Col 1: About */}
         <div>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#f59e0b', marginBottom: '15px' }}>
-            Noor-ul-Quran Academy
-          </h3>
-          <p style={{ color: '#9ca3af', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-            Aapka apna trusted platform online Quran, Tajweed, Hifz, aur Arabic language seekhne ke liye. Har umar ke students ke liye qualified teachers dastiyab hain.
+          <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}>Noor-ul-Quran Academy</h3>
+          <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#aaa' }}>
+            Providing high-quality online Quranic education with Tajweed to students worldwide.
           </p>
-
-          {/* Social Media Links (Twitter Removed) */}
-          <div style={{ display: 'flex', gap: '15px' }}>
-            <a 
-              href="https://facebook.com/your-page-name" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={socialIconStyle}
-              onMouseOver={(e) => e.currentTarget.style.color = '#f59e0b'} 
-              onMouseOut={(e) => e.currentTarget.style.color = '#9ca3af'}
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a 
-              href="https://instagram.com/your-page-name" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={socialIconStyle}
-              onMouseOver={(e) => e.currentTarget.style.color = '#f59e0b'} 
-              onMouseOut={(e) => e.currentTarget.style.color = '#9ca3af'}
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-
-            <a 
-              href="https://linkedin.com/in/your-page-name" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={socialIconStyle}
-              onMouseOver={(e) => e.currentTarget.style.color = '#f59e0b'} 
-              onMouseOut={(e) => e.currentTarget.style.color = '#9ca3af'}
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
         </div>
 
-        {/* Column 2: Quick Links */}
+        {/* Col 2: Quick Links */}
         <div>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#fff', marginBottom: '15px' }}>
-            Quick Links
-          </h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <li>
-              <Link to="/" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/courses" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → Courses
-              </Link>
-            </li>
-            <li>
-              <Link to="/teachers" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → Teachers
-              </Link>
-            </li>
-            <li>
-              <Link to="/free-trial" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → Free Trial Classes
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" style={linkStyle} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#9ca3af'}>
-                → Contact Us
-              </Link>
-            </li>
+          <h4 style={{ color: '#fff', fontSize: '1rem', marginBottom: '1rem' }}>Quick Links</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.9rem' }}>
+            <li><Link to="/" style={{ color: '#aaa', textDecoration: 'none' }}>Home</Link></li>
+            <li><Link to="/about" style={{ color: '#aaa', textDecoration: 'none' }}>About Us</Link></li>
+            <li><Link to="/courses" style={{ color: '#aaa', textDecoration: 'none' }}>Courses</Link></li>
+            <li><Link to="/contact" style={{ color: '#aaa', textDecoration: 'none' }}>Contact</Link></li>
           </ul>
         </div>
 
-        {/* Column 3: Contact Info */}
+        {/* Col 3: Contact Details */}
         <div>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#fff', marginBottom: '15px' }}>
-            Contact Info
-          </h3>
-          
-          {/* Real Clickable Email */}
-          <p style={{ color: '#9ca3af', fontSize: '0.9rem', marginBottom: '10px' }}>
-            Email:{' '}
-            <a 
-              href="mailto:kf.dev786@gmail.com" 
-              style={{ color: '#f59e0b', textDecoration: 'none' }}
-            >
-              kf.dev786@gmail.com
-            </a>
-          </p>
+          <h4 style={{ color: '#fff', fontSize: '1rem', marginBottom: '1rem' }}>Get in Touch</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.9rem' }}>
+            <a href="mailto:kf.dev786@gmail.com" style={{ color: '#aaa', textDecoration: 'none' }}>✉️ kf.dev786@gmail.com</a>
+            <a href="tel:+923126884512" style={{ color: '#aaa', textDecoration: 'none' }}>📞 +92 312 6884512</a>
+            <a href="https://wa.me/923126884512" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'none', fontWeight: 'bold' }}>💬 WhatsApp Support</a>
+          </div>
+        </div>
 
-          {/* Real Clickable WhatsApp Link */}
-          <p style={{ color: '#9ca3af', fontSize: '0.9rem', marginBottom: '10px' }}>
-            WhatsApp:{' '}
-            <a 
-              href="https://wa.me/923126884512" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={{ color: '#f59e0b', textDecoration: 'none' }}
-            >
-              +92 312 6884512
-            </a>
-          </p>
-
-          <p style={{ color: '#9ca3af', fontSize: '0.9rem' }}>
-            Available 24/7 for Online Classes
-          </p>
+        {/* Col 4: Social Icons (Twitter Removed) */}
+        <div>
+          <h4 style={{ color: '#fff', fontSize: '1rem', marginBottom: '1rem' }}>Follow Us</h4>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={socialStyle}>f</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={socialStyle}>in</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={socialStyle}>▶</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={socialStyle}>📷</a>
+          </div>
         </div>
 
       </div>
 
-      <div style={{ borderTop: '1px solid #374151', paddingTop: '20px', textAlign: 'center', color: '#9ca3af', fontSize: '0.85rem' }}>
-        &copy; {new Date().getFullYear()} Noor-ul-Quran Academy. All Rights Reserved.
+      <div style={{ borderTop: '1px solid #222', paddingTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: '#666' }}>
+        © {new Date().getFullYear()} Noor-ul-Quran Academy. All Rights Reserved.
       </div>
     </footer>
   );
