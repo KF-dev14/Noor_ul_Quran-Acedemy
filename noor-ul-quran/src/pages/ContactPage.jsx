@@ -15,6 +15,23 @@ function ContactPage() {
     setFormData({ name: '', email: '', phone: '', country: '', message: '' });
   };
 
+  const socialIconStyle = {
+    width: '38px',
+    height: '38px',
+    background: '#f8fafc',
+    border: '1px solid #e2e8f0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    fontWeight: 'bold',
+    color: '#333',
+    textDecoration: 'none',
+    fontSize: '0.9rem',
+    transition: 'all 0.2s ease'
+  };
+
   return (
     <div style={{ backgroundColor: '#f9fafb', minHeight: '100vh', paddingBottom: '5rem' }}>
       
@@ -70,7 +87,7 @@ function ContactPage() {
                   <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 'bold', color: '#444', marginBottom: '0.4rem' }}>Phone Number</label>
                   <input 
                     type="text" 
-                    placeholder="e.g. +92 3XX XXXXXXX" 
+                    placeholder="e.g. +92 312 6884512" 
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     style={{ width: '100%', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #ddd', fontSize: '0.95rem', outline: 'none' }} 
@@ -116,44 +133,54 @@ function ContactPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', marginBottom: '2.5rem' }}>
               
               {/* Email Box */}
-              <div style={{ background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+              <a 
+                href="mailto:kf.dev786@gmail.com" 
+                style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}
+              >
                 <span style={{ fontSize: '1.3rem', background: '#fffbeb', color: '#d97706', width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', flexShrink: '0' }}>✉️</span>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#333', letterSpacing: '0.8px', marginBottom: '2px' }}>EMAIL ADDRESS</div>
-                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>noorulquran@gmail.com</div>
+                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>kf.dev786@gmail.com</div>
                 </div>
-              </div>
+              </a>
 
               {/* Call Us Box */}
-              <div style={{ background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+              <a 
+                href="tel:+923126884512" 
+                style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}
+              >
                 <span style={{ fontSize: '1.3rem', background: '#eff6ff', color: '#2563eb', width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', flexShrink: '0' }}>📞</span>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#333', letterSpacing: '0.8px', marginBottom: '2px' }}>CALL US</div>
-                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>+92-314-5851717</div>
+                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>+92 312 6884512</div>
                 </div>
-              </div>
+              </a>
 
               {/* WhatsApp Us Box */}
-              <div style={{ background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+              <a 
+                href="https://wa.me/923126884512" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid #eaeaea', borderRadius: '12px', padding: '1.1rem 1.4rem', display: 'flex', alignItems: 'center', gap: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}
+              >
                 <span style={{ fontSize: '1.3rem', background: '#f0fdf4', color: '#16a34a', width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', flexShrink: '0' }}>💬</span>
                 <div>
                   <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#333', letterSpacing: '0.8px', marginBottom: '2px' }}>WHATSAPP US</div>
-                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>+1-409-9417108</div>
+                  <div style={{ fontSize: '0.98rem', fontWeight: 'normal', color: '#444' }}>+92 312 6884512</div>
                 </div>
-              </div>
+              </a>
 
             </div>
 
-            {/* Connect With Us Social Icons */}
+            {/* Connect With Us Social Icons (Twitter Removed) */}
             <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#111', marginBottom: '1rem' }}>
               Connect With Us:
             </h3>
             <div style={{ display: 'flex', gap: '10px' }}>
-              <span style={{ width: '38px', height: '38px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', cursor: 'pointer', fontWeight: 'bold', color: '#333' }}>f</span>
-              <span style={{ width: '38px', height: '38px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', cursor: 'pointer', fontWeight: 'bold', color: '#333' }}>in</span>
-              <span style={{ width: '38px', height: '38px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', cursor: 'pointer', fontWeight: 'bold', color: '#333' }}>𝕏</span>
-              <span style={{ width: '38px', height: '38px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', cursor: 'pointer', fontWeight: 'bold', color: '#333' }}>▶</span>
-              <span style={{ width: '38px', height: '38px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', cursor: 'pointer', fontWeight: 'bold', color: '#333' }}>📷</span>
+              <a href="https://facebook.com/your-page-name" target="_blank" rel="noopener noreferrer" style={socialIconStyle}>f</a>
+              <a href="https://linkedin.com/in/your-page-name" target="_blank" rel="noopener noreferrer" style={socialIconStyle}>in</a>
+              <a href="https://youtube.com/your-channel-name" target="_blank" rel="noopener noreferrer" style={socialIconStyle}>▶</a>
+              <a href="https://instagram.com/your-page-name" target="_blank" rel="noopener noreferrer" style={socialIconStyle}>📷</a>
             </div>
 
           </div>
