@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImg from '../assets/logo.png';
 
 function Navbar() {
   const location = useLocation();
@@ -80,7 +81,7 @@ function Navbar() {
           {/* Logo & Title */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
             <img 
-              src={process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/logo.png` : '/logo.png'} 
+              src={logoImg} 
               alt="Noor-ul-Quran Logo" 
               style={{ height: '48px', width: 'auto' }} 
             />
