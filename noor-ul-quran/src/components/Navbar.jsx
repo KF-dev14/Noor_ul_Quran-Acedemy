@@ -80,10 +80,9 @@ function Navbar() {
           {/* Logo & Title */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
             <img 
-              src="/logo.png" 
+              src={process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/logo.png` : '/logo.png'} 
               alt="Noor-ul-Quran Logo" 
-              style={{ height: '42px', width: 'auto' }} 
-              onError={(e) => { e.target.style.display = 'none'; }} 
+              style={{ height: '48px', width: 'auto' }} 
             />
             <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#111827' }}>
               Noor-ul-Quran
